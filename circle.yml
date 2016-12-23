@@ -5,9 +5,5 @@ machine:
 deployment:
   procuction:
     branch: master
-    codedeploy:
-      slack-bot:
-        application_root: /
-        region: ap-northeast-1
-        deployment_group: prod
-        deployment_config: CodeDeployDefault.AllAtOnce
+    commands:
+      - sh scripts/deploy_application.sh
