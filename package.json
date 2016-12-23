@@ -4,7 +4,7 @@
   "description": "Bot for slack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test"
+    "test": "echo \"No test\""
   },
   "author": "yukofeb",
   "license": "MIT",
