@@ -1,10 +1,10 @@
 var RtmClient = require('@slack/client').RtmClient;
 var RTM_EVENTS = require('@slack/client').RTM_EVENTS;
 
+var request = require('request');
+
 var token = process.env.SLACK_API_TOKEN || '';
 var g_access_key = process.env.G_ACCESS_KEY;
-
-var request = require('request');
 
 var rtm = new RtmClient(token, { logLevel: 'info' });
 rtm.start();
