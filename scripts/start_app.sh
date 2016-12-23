@@ -1,4 +1,3 @@
 #!/bin/bash
 
-cd /opt/slack-bot
-node index.js
+/usr/local/bin/node /opt/slack-bot/index.js
