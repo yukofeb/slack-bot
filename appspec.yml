@@ -1,0 +1,9 @@
+version: 0.1
+os: linux
+files:
+  - source: /
+    destination: /opt/slack-bot
+hooks:
+  ApplicationStart:
+    - location: scripts/codedeploy_start.sh
+      timeout: 180
