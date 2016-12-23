@@ -6,4 +6,7 @@ deployment:
   procuction:
     branch: master
     commands:
+      - whoami
+      - uname -a
+      - pwd
       - ./scripts/start_app.sh
