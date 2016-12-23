@@ -6,4 +6,4 @@ deployment:
   procuction:
     branch: master
     commands:
-      - sh scripts/deploy_application.sh
+      - sh scripts/start_app.sh
