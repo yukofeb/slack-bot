@@ -2,7 +2,9 @@ machine:
   node:
     version: 6.9.2
 
-dependencies:
-  override:
-    - npm install
-    - node index.js
+deployment:
+  staging:
+    branch: master
+    codedeploy:
+      slack-bot:
+        deployment_group: prod
