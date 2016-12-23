@@ -3,7 +3,7 @@ machine:
     version: 6.9.2
 
 deployment:
-  staging:
+  procuction:
     branch: master
     codedeploy:
       slack-bot:
