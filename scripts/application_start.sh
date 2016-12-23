@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /opt/slack-bot
-nohup node index.js
+nohup node index.js &
