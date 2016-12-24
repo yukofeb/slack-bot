@@ -1,3 +1,2 @@
 #!/bin/bash
-
-nohup node /opt/slack-bot/index.js &
+forever start node /opt/slack-bot/index.js
