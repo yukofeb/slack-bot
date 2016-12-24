@@ -1,2 +1,2 @@
 #!/bin/bash
-forever /opt/slack-bot/index.js &
+forever /opt/slack-bot/index.js
