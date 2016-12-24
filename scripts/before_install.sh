@@ -8,5 +8,3 @@ sudo npm install n -g
 sudo n 6.9.2
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo npm install
-
-sudo npm install forever -g
