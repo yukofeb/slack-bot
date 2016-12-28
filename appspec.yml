@@ -3,13 +3,6 @@ os: linux
 files:
   - source: /
     destination: /opt/slack-bot
-hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 180
-  ApplicationStart:
-    - location: scripts/application_start.sh
-      timeout: 180
 permissions:
   - object: /opt/slack-bot/scripts
     pattern: "*.sh"
@@ -18,3 +11,10 @@ permissions:
     mode: 755
     type:
       - file
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 180
