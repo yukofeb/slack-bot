@@ -4,7 +4,6 @@ cd /opt/slack-bot
 sudo apt-get install -y nodejs npm
 sudo npm cache clean
 sudo npm install n -g
-
 sudo npm install forever -g
 
 sudo n 6.9.2
