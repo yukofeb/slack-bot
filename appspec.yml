@@ -10,3 +10,11 @@ hooks:
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 180
+permissions:
+  - object: /opt/slack-bot
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
