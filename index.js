@@ -28,6 +28,18 @@ rtm.on(RTM_EVENTS.MESSAGE, function replyYourMessage(message) {
 
 rtm.on(RTM_EVENTS.MESSAGE, function replyMessage(message) {
     if (message.user !== undefined) {
+        // Help
+        if (message.text.match(/^\$help\slunch/)) {
+            var str = 'Usage: $lunch [options]\n\n' +
+                'Options:\n No options.';
+            rtm.sendMessage(str, message.channel);
+        } else if (message.text.match(/^\$help/)) {
+            var str = 'Specify help command.\n\n' +
+                    '$help lunch';
+            rtm.sendMessage(str, message.channel);
+        }
+
+        // Lunch
         if (message.text.match(/^\$lunch/)) {
             var G_AREACODES = 'AREAS2188'; //本郷
             var G_HIT_PER_PAGE = '30'
