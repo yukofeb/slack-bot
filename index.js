@@ -60,5 +60,13 @@ rtm.on(RTM_EVENTS.MESSAGE, function replyMessage(message) {
                 }
             })
         }
+
+        // ohayo
+        if (message.text.match(/おはよー|おはよう/)) {
+            var ohayo = ['おはよー', 'おはよう！', 'おはようございます。', 'Good Morning!'];
+            var num = Math.floor(Math.random() * ohayo.length);
+            rtm.sendMessage(ohayo[num], message.channel);
+        }
+
     }
 });
