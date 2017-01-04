@@ -25,6 +25,6 @@ export G_ACCESS_KEY='***'
 ```
 
 ## CircleCI Settings
-[Configuring CircleCI \- CircleCI](https://circleci.com/docs/configuration/)
-[Continuous Deployment with Amazon S3 \- CircleCI](https://circleci.com/docs/continuous-deployment-with-amazon-s3/)
-[Environment variables \- CircleCI](https://circleci.com/docs/environment-variables/)
+[Configuring CircleCI \- CircleCI](https://circleci.com/docs/configuration/)  
+[Continuous Deployment with Amazon S3 \- CircleCI](https://circleci.com/docs/continuous-deployment-with-amazon-s3/)  
+[Environment variables \- CircleCI](https://circleci.com/docs/environment-variables/)  
