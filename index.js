@@ -33,9 +33,14 @@ rtm.on(RTM_EVENTS.MESSAGE, function replyMessage(message) {
             var str = 'Usage: $lunch [options]\n\n' +
                 'Options:\n No options.';
             rtm.sendMessage(str, message.channel);
+        } else if (message.text.match(/^\$help\ssearch/))  {
+            var str = 'Usage: $search [options]\n\n' +
+                'Options:\n query: search word';
+            rtm.sendMessage(str, message.channel);
         } else if (message.text.match(/^\$help/)) {
             var str = 'Specify help command.\n\n' +
-                    '$help lunch';
+                    '$help lunch\n' +
+                    '$help search';
             rtm.sendMessage(str, message.channel);
         }
 
@@ -59,6 +64,16 @@ rtm.on(RTM_EVENTS.MESSAGE, function replyMessage(message) {
                     rtm.sendMessage('No hit.', message.channel);
                 }
             })
+        }
+
+        // search
+        if (message.text.match(/^\$search$/)) {
+            rtm.sendMessage('No query. Example: $search apple', message.channel);
+        } else if (message.text.match(/^\$search/)) {
+            var search_word = message.text.match(/^\$search\s(.*)/);
+            var amazon_url = 'https://www.amazon.co.jp/s/field-keywords=' + encodeURIComponent(search_word[1]);
+            var reply_str = 'Amazon: ' + amazon_url;
+            rtm.sendMessage(reply_str, message.channel);
         }
 
         // ohayo
