@@ -72,7 +72,11 @@ rtm.on(RTM_EVENTS.MESSAGE, function replyMessage(message) {
         } else if (message.text.match(/^\$search/)) {
             var search_word = message.text.match(/^\$search\s(.*)/);
             var amazon_url = 'https://www.amazon.co.jp/s/field-keywords=' + encodeURIComponent(search_word[1]);
-            var reply_str = 'Amazon: ' + amazon_url;
+            var rakuten_url = 'http://search.rakuten.co.jp/search/mall/' + encodeURIComponent(search_word[1]);
+            var google_url = 'https://www.google.co.jp/#q=' + encodeURIComponent(search_word[1]);
+            var reply_str = ':amazon: ' + amazon_url +
+                '\n:rakuten: ' + rakuten_url +
+                '\n:google: ' + google_url;
             rtm.sendMessage(reply_str, message.channel);
         }
 
